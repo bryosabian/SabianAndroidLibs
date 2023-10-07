@@ -58,6 +58,7 @@
     <dimen name="bbuton_rounded_corner_radius">5dp</dimen>
     <dimen name="bthumbnail_rounded_corner_radius">3dp</dimen>
     <dimen name="padding_small">8dp</dimen>
+    <item name="bootstrap_button_drawable_container" type="id"/>
     <string name="action_settings">Settings</string>
     <string name="app_name">BButton</string>
     <declare-styleable name="BootstrapButton">
@@ -70,6 +71,7 @@
         <attr format="string" name="bb_text_gravity"/>
         <attr name="android:textSize"/>
         <attr name="android:text"/>
+        <attr format="color" name="android:textColor"/>
         <attr name="android:enabled"/>
         <attr name="android:layout_width"/>
         <attr name="android:layout_weight"/>

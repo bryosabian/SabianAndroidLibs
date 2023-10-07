@@ -1,0 +1,48 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.esafirm.imagepicker" >
+4
+5    <uses-sdk android:minSdkVersion="16" />
+5-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml
+6
+7    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+7-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:5:5-80
+7-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:5:22-77
+8    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+8-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:6:5-81
+8-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:6:22-78
+9    <uses-permission android:name="android.permission.CAMERA" />
+9-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:7:5-65
+9-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:7:22-62
+10
+11    <application>
+11-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:9:5-25:19
+12        <activity
+12-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:10:9-13:50
+13            android:name="com.esafirm.imagepicker.features.ImagePickerActivity"
+13-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:11:13-80
+14            android:configChanges="orientation|screenSize"
+14-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:12:13-59
+15            android:theme="@style/ef_AppTheme" />
+15-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:13:13-47
+16
+17        <provider
+17-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:15:9-23:20
+18            android:name="com.esafirm.imagepicker.helper.ImagePickerFileProvider"
+18-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:16:13-59
+19            android:authorities="${applicationId}.imagepicker.provider"
+19-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:17:13-72
+20            android:exported="false"
+20-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:18:13-37
+21            android:grantUriPermissions="true" >
+21-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:19:13-47
+22            <meta-data
+22-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:20:13-22:71
+23                android:name="android.support.FILE_PROVIDER_PATHS"
+23-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:21:17-67
+24                android:resource="@xml/image_picker_provider_paths" />
+24-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/imagepicker/src/main/AndroidManifest.xml:22:17-68
+25        </provider>
+26    </application>
+27
+28</manifest>

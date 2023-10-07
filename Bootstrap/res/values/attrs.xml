@@ -10,6 +10,7 @@
         <attr name="bb_text_gravity" format="string" />
         <attr name="android:textSize" />
         <attr name="android:text" />
+        <attr name="android:textColor" format="color" />
         <attr name="android:enabled" />
         <attr name="android:layout_width" />
         <attr name="android:layout_weight" />

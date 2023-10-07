@@ -2,6 +2,8 @@ package com.beardedhen.androidbootstrap;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.LayerDrawable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -29,12 +31,14 @@ public class BootstrapButton extends FrameLayout {
         INVERSE("inverse", R.drawable.bbuton_inverse, R.drawable.bbuton_inverse_rounded, R.color.white),
 
         /*Sabian Addons*/
-        TRANSPARENT_INVERSE("inverse_transparent",R.drawable.bbutton_inverse_transparent,R.drawable.bbutton_inverse_transparent_rounded,R.color.white),
-        THEMED("themed",R.drawable.sabian_button_theme,R.drawable.sabian_button_theme,R.color.white),
-        THEMED_ALT("themed_alt",R.drawable.sabian_button_theme_alt,R.drawable.sabian_button_theme_alt,R.color.sabian_btn_theme_background),
-        THEMED_DANGER("themed_danger",R.drawable.sabian_button_theme_danger,R.drawable.sabian_button_theme_danger,R.color.white),
-        THEMED_SUCCESS("themed_success",R.drawable.sabian_button_theme_success,R.drawable.sabian_button_theme_success,R.color.white),
-        TRANSPARENT_WHITE("transparent_white",R.drawable.sabian_button_transparent,R.drawable.sabian_button_transparent_rounded,R.color.white);
+        TRANSPARENT_INVERSE("inverse_transparent", R.drawable.bbutton_inverse_transparent, R.drawable.bbutton_inverse_transparent_rounded, R.color.white),
+
+        THEMED("themed", R.drawable.sabian_button_theme, R.drawable.sabian_button_theme, R.color.white),
+        THEMED_ALT("themed_alt", R.drawable.sabian_button_theme_alt, R.drawable.sabian_button_theme_alt, R.color.sabian_btn_theme_background),
+
+        THEMED_DANGER("themed_danger", R.drawable.sabian_button_theme_danger, R.drawable.sabian_button_theme_danger, R.color.white),
+        THEMED_SUCCESS("themed_success", R.drawable.sabian_button_theme_success, R.drawable.sabian_button_theme_success, R.color.white),
+        TRANSPARENT_WHITE("transparent_white", R.drawable.sabian_button_transparent, R.drawable.sabian_button_transparent_rounded, R.color.white);
 
         private final String type;
         private final int normalBg;
@@ -128,6 +132,7 @@ public class BootstrapButton extends FrameLayout {
 
         TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.BootstrapButton);
 
+        int textColor = -1;
         String iconLeft = "";
         String iconRight = "";
         String text = "";
@@ -175,6 +180,9 @@ public class BootstrapButton extends FrameLayout {
                     float rawSize = a.getDimension(R.styleable.BootstrapButton_android_textSize, defaultDimen);
                     fontSize = rawSize / scaledDensity;
                 }
+
+
+                textColor = a.getColor(R.styleable.BootstrapButton_android_textColor, -1);
             }
         } finally {
             if (a != null) {
@@ -234,6 +242,10 @@ public class BootstrapButton extends FrameLayout {
 
         layout.setPadding(0, paddingB, 0, paddingB);
 
+        if (textColor != -1) {
+            setTextColor(textColor);
+        }
+
         addView(v);
     }
 
@@ -245,8 +257,7 @@ public class BootstrapButton extends FrameLayout {
 
             if (!onlyIcon) {
                 lblLeft.setPadding(paddingB, 0, 0, 0);
-            }
-            else {
+            } else {
                 lblLeft.setPadding(paddingB, 0, paddingB, 0);
             }
 
@@ -264,8 +275,7 @@ public class BootstrapButton extends FrameLayout {
 
             if (!onlyIcon) {
                 lblRight.setPadding(0, 0, paddingB, 0);
-            }
-            else {
+            } else {
                 lblRight.setPadding(paddingB, 0, paddingB, 0);
             }
 
@@ -320,9 +330,57 @@ public class BootstrapButton extends FrameLayout {
 
         int textColor = getResources().getColor(type.getTextColour());
 
+        setTextColor(textColor);
+    }
+
+    public void setTextColor(int textColor) {
         lblLeft.setTextColor(textColor);
         lblMiddle.setTextColor(textColor);
         lblRight.setTextColor(textColor);
+    }
+
+
+    public void setButtonBackgroundColor(int color) {
+        setButtonBackgroundColor(color, R.id.bootstrap_button_drawable_container);
+    }
+
+    public void setButtonStrokeColor(int color, int width) {
+        setButtonStrokeColor(color, width, R.id.bootstrap_button_drawable_container);
+    }
+
+    /**
+     * Only applies for layer list
+     *
+     * @param color
+     * @param layerID
+     */
+    public void setButtonBackgroundColor(int color, int layerID) {
+        try {
+            LayerDrawable btnDrawable = (LayerDrawable) layout.getBackground().mutate();
+            GradientDrawable btnBgDrawable = (GradientDrawable) btnDrawable.findDrawableByLayerId(layerID);
+            btnBgDrawable.setColor(color);
+            layout.setBackground(btnDrawable);
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Only applies for layer list
+     *
+     * @param color
+     * @param width
+     * @param layerID
+     */
+    public void setButtonStrokeColor(int color, int width, int layerID) {
+        try {
+            LayerDrawable btnDrawable = (LayerDrawable) layout.getBackground().mutate();
+            GradientDrawable btnBgDrawable = (GradientDrawable) btnDrawable.findDrawableByLayerId(layerID);
+            btnBgDrawable.setStroke(width, color);
+            layout.setBackground(btnDrawable);
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -330,7 +388,7 @@ public class BootstrapButton extends FrameLayout {
      *
      * @param enabled - boolean state for either enabled or disabled
      */
-    public void setBootstrapButtonEnabled(boolean enabled) {
+    public void setButtonEnabled(boolean enabled) {
         this.setEnabled(enabled);
     }
 

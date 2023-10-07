@@ -1,0 +1,67 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:3:1-24:12
+INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:3:1-24:12
+INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:3:1-24:12
+	package
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:5:5-38
+		INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
+		INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:4:5-51
+	xmlns:android
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:3:11-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:8:22-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:9:22-76
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:10:5-98
+	android:name
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:10:22-95
+uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:11:5-94
+	android:name
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:11:22-91
+application
+ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:13:5-23:19
+service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
+ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:14:9-16:40
+	android:exported
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:16:13-37
+	android:name
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:15:13-109
+service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
+ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:17:9-19:40
+	android:exported
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:19:13-37
+	android:name
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:18:13-104
+service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
+ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:20:9-22:40
+	android:exported
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml:21:13-97
+uses-sdk
+INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
+INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
+INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
+INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
+		INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
+		ADDED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
+		INJECTED from /Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/SmartLocation/src/main/AndroidManifest.xml
