@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-def compileSdk = 32
-def targetSdk = 32
+def compileSdk = 33
+def targetSdk = 33
 def minSdk = 16
 def core_ktx_version = '1.8.0'
 def kotlin_version = '1.7.0'
