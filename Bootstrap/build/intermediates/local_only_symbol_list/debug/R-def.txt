@@ -33,6 +33,7 @@ color bbutton_default_disabled
 color bbutton_default_disabled_edge
 color bbutton_default_edge
 color bbutton_default_pressed
+color bbutton_edittext_background
 color bbutton_edittext_border
 color bbutton_edittext_disabled
 color bbutton_info

@@ -16,6 +16,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
+import androidx.annotation.ColorInt;
+
 import com.github.gcacace.signaturepad.R;
 import com.github.gcacace.signaturepad.utils.Bezier;
 import com.github.gcacace.signaturepad.utils.ControlTimedPoints;
@@ -62,12 +64,18 @@ public class SignaturePad extends View {
     private final int DEFAULT_ATTR_PEN_MIN_WIDTH_PX = 3;
     private final int DEFAULT_ATTR_PEN_MAX_WIDTH_PX = 7;
     private final int DEFAULT_ATTR_PEN_COLOR = Color.BLACK;
+
+    private final int DEFAULT_ATTR_CANVAS_COLOR = Color.WHITE;
     private final float DEFAULT_ATTR_VELOCITY_FILTER_WEIGHT = 0.9f;
     private final boolean DEFAULT_ATTR_CLEAR_ON_DOUBLE_CLICK = false;
 
     private Paint mPaint = new Paint();
     private Bitmap mSignatureBitmap = null;
     private Canvas mSignatureBitmapCanvas = null;
+
+    @ColorInt
+    private int mCanvasColor = Color.WHITE;
+
 
     public SignaturePad(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -82,6 +90,7 @@ public class SignaturePad extends View {
             mMinWidth = a.getDimensionPixelSize(R.styleable.SignaturePad_penMinWidth, convertDpToPx(DEFAULT_ATTR_PEN_MIN_WIDTH_PX));
             mMaxWidth = a.getDimensionPixelSize(R.styleable.SignaturePad_penMaxWidth, convertDpToPx(DEFAULT_ATTR_PEN_MAX_WIDTH_PX));
             mPaint.setColor(a.getColor(R.styleable.SignaturePad_penColor, DEFAULT_ATTR_PEN_COLOR));
+            mCanvasColor = a.getColor(R.styleable.SignaturePad_canvasColor, DEFAULT_ATTR_CANVAS_COLOR);
             mVelocityFilterWeight = a.getFloat(R.styleable.SignaturePad_velocityFilterWeight, DEFAULT_ATTR_VELOCITY_FILTER_WEIGHT);
             mClearOnDoubleClick = a.getBoolean(R.styleable.SignaturePad_clearOnDoubleClick, DEFAULT_ATTR_CLEAR_ON_DOUBLE_CLICK);
         } finally {
@@ -100,6 +109,8 @@ public class SignaturePad extends View {
         clearView();
 
     }
+
+
 
     @Override
     protected Parcelable onSaveInstanceState() {
@@ -262,11 +273,21 @@ public class SignaturePad extends View {
 
     public Bitmap getSignatureBitmap() {
         Bitmap originalBitmap = getTransparentSignatureBitmap();
-        Bitmap whiteBgBitmap = Bitmap.createBitmap(originalBitmap.getWidth(), originalBitmap.getHeight(), Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(whiteBgBitmap);
-        canvas.drawColor(Color.WHITE);
+        Bitmap canvasBgBitmap = Bitmap.createBitmap(originalBitmap.getWidth(), originalBitmap.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(canvasBgBitmap);
+        canvas.drawColor(getCanvasColor());
         canvas.drawBitmap(originalBitmap, 0, 0, null);
-        return whiteBgBitmap;
+        return canvasBgBitmap;
+    }
+
+    @ColorInt
+    private int getCanvasColor() {
+        return mCanvasColor;
+    }
+
+    public SignaturePad setCanvasColor(@ColorInt int canvasColor) {
+        this.mCanvasColor = canvasColor;
+        return this;
     }
 
     public void setSignatureBitmap(final Bitmap signature) {

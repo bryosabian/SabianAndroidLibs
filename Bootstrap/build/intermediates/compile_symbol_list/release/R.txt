@@ -31,6 +31,7 @@ int color bbutton_default_disabled 0x0
 int color bbutton_default_disabled_edge 0x0
 int color bbutton_default_edge 0x0
 int color bbutton_default_pressed 0x0
+int color bbutton_edittext_background 0x0
 int color bbutton_edittext_border 0x0
 int color bbutton_edittext_disabled 0x0
 int color bbutton_info 0x0

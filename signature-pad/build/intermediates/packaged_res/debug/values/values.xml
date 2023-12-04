@@ -4,6 +4,7 @@
         <attr format="dimension" name="penMinWidth"/>
         <attr format="dimension" name="penMaxWidth"/>
         <attr format="color" name="penColor"/>
+        <attr format="color" name="canvasColor"/>
         <attr format="float" name="velocityFilterWeight"/>
         <attr format="boolean" name="clearOnDoubleClick"/>
     </declare-styleable>

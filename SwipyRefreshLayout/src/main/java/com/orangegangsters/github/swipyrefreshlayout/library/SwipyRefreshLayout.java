@@ -34,6 +34,7 @@ import android.view.animation.Transformation;
 import android.widget.AbsListView;
 
 import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
 import androidx.core.view.MotionEventCompat;
 import androidx.core.view.ViewCompat;
 
@@ -110,6 +111,8 @@ public class SwipyRefreshLayout extends ViewGroup {
     private int mCurrentTargetOffsetTop;
     // Whether or not the starting offset has been determined.
     private boolean mOriginalOffsetCalculated = false;
+
+    private Integer mProgressBackgroundColor = null;
 
     private float mInitialMotionY;
     private float mInitialDownY;
@@ -303,6 +306,11 @@ public class SwipyRefreshLayout extends ViewGroup {
             mDirection = SwipyRefreshLayoutDirection.TOP;
             mBothDirection = true;
         }
+
+        int bgColor = a2.getColor(R.styleable.SwipyRefreshLayout_srl_backgroundColor, -1);
+        if (bgColor != -1) {
+            mProgressBackgroundColor = bgColor;
+        }
         a2.recycle();
 
         final DisplayMetrics metrics = getResources().getDisplayMetrics();
@@ -336,6 +344,8 @@ public class SwipyRefreshLayout extends ViewGroup {
         mProgress.setBackgroundColor(CIRCLE_BG_LIGHT);
         mCircleView.setImageDrawable(mProgress);
         mCircleView.setVisibility(View.GONE);
+        if (mProgressBackgroundColor != null)
+            setProgressBackgroundColorRaw(mProgressBackgroundColor);
         addView(mCircleView);
     }
 
@@ -484,7 +494,7 @@ public class SwipyRefreshLayout extends ViewGroup {
      *
      * @param colorRes Resource id of the color.
      */
-    public void setProgressBackgroundColor(int colorRes) {
+    public void setProgressBackgroundColor(@ColorRes int colorRes) {
         mCircleView.setBackgroundColor(colorRes);
         mProgress.setBackgroundColor(getResources().getColor(colorRes));
     }
@@ -495,6 +505,7 @@ public class SwipyRefreshLayout extends ViewGroup {
      * @param color Color
      */
     public void setProgressBackgroundColorRaw(@ColorInt int color) {
+        this.mProgressBackgroundColor = color;
         mCircleView.setBackgroundColorRaw(color);
         mProgress.setBackgroundColor(color);
     }

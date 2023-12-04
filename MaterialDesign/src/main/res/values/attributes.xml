@@ -3,6 +3,10 @@
 
     <declare-styleable name="CustomAttributes">
 
+        <attr name="android:background" format="color" />
+
+        <attr name="sabian_backgroundColor" format="color" />
+
         <!-- Color of ripple animation -->
         <attr name="rippleColor_2" format="color|reference" />
         <!-- Speed of ripple animation -->

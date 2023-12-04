@@ -78,6 +78,7 @@ int attr buttonStyle 0x0
 int attr buttonStyleSmall 0x0
 int attr buttonTint 0x0
 int attr buttonTintMode 0x0
+int attr canvasColor 0x0
 int attr cardBackgroundColor 0x0
 int attr cardCornerRadius 0x0
 int attr cardElevation 0x0
@@ -1535,12 +1536,13 @@ int styleable SearchView_searchIcon 13
 int styleable SearchView_submitBackground 14
 int styleable SearchView_suggestionRowLayout 15
 int styleable SearchView_voiceIcon 16
-int[] styleable SignaturePad { 0x0, 0x0, 0x0, 0x0, 0x0 }
-int styleable SignaturePad_clearOnDoubleClick 0
-int styleable SignaturePad_penColor 1
-int styleable SignaturePad_penMaxWidth 2
-int styleable SignaturePad_penMinWidth 3
-int styleable SignaturePad_velocityFilterWeight 4
+int[] styleable SignaturePad { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
+int styleable SignaturePad_canvasColor 0
+int styleable SignaturePad_clearOnDoubleClick 1
+int styleable SignaturePad_penColor 2
+int styleable SignaturePad_penMaxWidth 3
+int styleable SignaturePad_penMinWidth 4
+int styleable SignaturePad_velocityFilterWeight 5
 int[] styleable Spinner { 0x1010262, 0x10100b2, 0x1010176, 0x101017b, 0x0 }
 int styleable Spinner_android_dropDownWidth 0
 int styleable Spinner_android_entries 1
