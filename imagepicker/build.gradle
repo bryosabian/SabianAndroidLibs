@@ -38,14 +38,14 @@ android {
     resourcePrefix "ef_"
 }
 
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
+// task sourcesJar(type: Jar) {
+//     from android.sourceSets.main.java.srcDirs
+//     classifier = 'sources'
+// }
 
-artifacts {
-    archives sourcesJar
-}
+// artifacts {
+//     archives sourcesJar
+// }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
