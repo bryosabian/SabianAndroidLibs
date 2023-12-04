@@ -38,14 +38,14 @@ android {
     resourcePrefix "ef_"
 }
 
-// task sourcesJar(type: Jar) {
-//     from android.sourceSets.main.java.srcDirs
-//     classifier = 'sources'
-// }
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
 
-// artifacts {
-//     archives sourcesJar
-// }
+artifacts {
+    archives sourcesJar
+}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -55,4 +55,18 @@ dependencies {
     testImplementation 'junit:junit:4.13'
     implementation "androidx.core:core-ktx:$core_ktx_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'https://github.com/bryosabian' //your git id
+                artifactId = 'SabianAndroidLibs' //your-repository
+                version = '0.0.4' // As same as the Tag
+            }
+        }
+    }
 }
