@@ -116,7 +116,7 @@ public class ImagePickerUtils {
         Long duration = Long.parseLong(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION));
         try {
             retriever.release();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         long second = (duration / 1000) % 60;

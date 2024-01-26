@@ -715,8 +715,6 @@ id top
 id topPanel
 id uniform
 id up
-id view_tree_lifecycle_owner
-id view_tree_view_model_store_owner
 id wrap_content
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur

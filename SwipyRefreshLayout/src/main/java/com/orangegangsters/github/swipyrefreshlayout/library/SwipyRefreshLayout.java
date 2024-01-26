@@ -20,6 +20,7 @@ package com.orangegangsters.github.swipyrefreshlayout.library;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -307,10 +308,7 @@ public class SwipyRefreshLayout extends ViewGroup {
             mBothDirection = true;
         }
 
-        int bgColor = a2.getColor(R.styleable.SwipyRefreshLayout_srl_backgroundColor, -1);
-        if (bgColor != -1) {
-            mProgressBackgroundColor = bgColor;
-        }
+        mProgressBackgroundColor = a2.getColor(R.styleable.SwipyRefreshLayout_srl_backgroundColor, Color.WHITE);
         a2.recycle();
 
         final DisplayMetrics metrics = getResources().getDisplayMetrics();

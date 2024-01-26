@@ -4,10 +4,13 @@
 4    android:versionCode="110"
 5    android:versionName="1.1.0" >
 6
-7    <uses-sdk android:minSdkVersion="8" />
-7-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/signature-pad/src/main/AndroidManifest.xml
-8
-9    <application />
-9-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/signature-pad/src/main/AndroidManifest.xml:7:5-20
+7    <uses-sdk
+8        android:minSdkVersion="8"
+8-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/signature-pad/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/signature-pad/src/main/AndroidManifest.xml
 10
-11</manifest>
+11    <application />
+11-->/Users/sweetpea/Desktop/Sabian/Projects/Android/Libs/signature-pad/src/main/AndroidManifest.xml:7:5-20
+12
+13</manifest>

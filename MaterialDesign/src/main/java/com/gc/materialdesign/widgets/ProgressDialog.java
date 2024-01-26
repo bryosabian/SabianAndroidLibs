@@ -43,7 +43,11 @@ public class ProgressDialog extends android.app.Dialog {
     }
 
     public ProgressDialog(Context context, String title, @ColorInt int progressColor) {
-        super(context, android.R.style.Theme_Translucent);
+        this(context, title, progressColor, android.R.style.Theme_Translucent);
+    }
+
+    public ProgressDialog(Context context, String title, @ColorInt int progressColor, int themeResId) {
+        super(context, themeResId);
         this.title = title;
         this.progressColor = progressColor;
         this.context = context;
