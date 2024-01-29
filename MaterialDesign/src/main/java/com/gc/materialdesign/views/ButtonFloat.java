@@ -1,6 +1,7 @@
 package com.gc.materialdesign.views;
 
 import com.gc.materialdesign.R;
+import com.gc.materialdesign.utils.SabianUtils;
 import com.gc.materialdesign.utils.Utils;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.nineoldandroids.view.ViewHelper;
@@ -108,33 +109,17 @@ public class ButtonFloat extends Button {
         if (iconResource != -1)
             drawableIcon = getResources().getDrawable(iconResource);
         final boolean animate = attrs.getAttributeBooleanValue(MATERIALDESIGNXML, "animate", false);
-        post(new Runnable() {
-
-            @Override
-            public void run() {
-                showPosition = ViewHelper.getY(ButtonFloat.this) - Utils.dpToPx(24, getResources());
-                hidePosition = ViewHelper.getY(ButtonFloat.this) + getHeight() * 3;
-                if (animate) {
-                    ViewHelper.setY(ButtonFloat.this, hidePosition);
-                    show();
-                }
+        post(() -> {
+            showPosition = ViewHelper.getY(ButtonFloat.this) - Utils.dpToPx(24, getResources());
+            hidePosition = ViewHelper.getY(ButtonFloat.this) + getHeight() * 3;
+            if (animate) {
+                ViewHelper.setY(ButtonFloat.this, hidePosition);
+                show();
             }
         });
 
 
-        TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.CustomAttributes);
-
-        int aCount = a.getIndexCount();
-
-        for (int i = 0; i < aCount; ++i) {
-            int attr = a.getIndex(i);
-            if (attr == R.styleable.CustomAttributes_sabian_backgroundColor || attr == R.styleable.CustomAttributes_android_background) {
-                int realBgColor = a.getColor(attr, -1);
-                if (realBgColor != -1)
-                    setBackgroundColor(realBgColor);
-            }
-        }
-        a.recycle();
+        SabianUtils.resolveRealBackgroundColor(this, attrs);
 
     }
 

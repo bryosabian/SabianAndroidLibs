@@ -6,6 +6,8 @@
         <attr name="android:background" format="color" />
 
         <attr name="sabian_backgroundColor" format="color" />
+        <attr name="android:textColor" format="color" />
+
 
         <!-- Color of ripple animation -->
         <attr name="rippleColor_2" format="color|reference" />
