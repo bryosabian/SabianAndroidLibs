@@ -39,6 +39,9 @@ import androidx.annotation.ColorRes;
 import androidx.core.view.MotionEventCompat;
 import androidx.core.view.ViewCompat;
 
+import com.orangegangsters.github.swipyrefreshlayout.R;
+
+
 /**
  * The SwipeRefreshLayout should be used whenever the user can refresh the
  * contents of a view via a vertical swipe gesture. The activity that

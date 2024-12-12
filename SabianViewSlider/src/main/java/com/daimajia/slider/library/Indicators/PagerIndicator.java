@@ -13,11 +13,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.daimajia.slider.library.R;
+import com.daimajia.slider.R;
 import com.daimajia.slider.library.Tricks.InfinitePagerAdapter;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 
 import java.util.ArrayList;
+
+
 
 /**
  * Pager Indicator.
@@ -116,7 +118,7 @@ public class PagerIndicator extends LinearLayout implements ViewPagerEx.OnPageCh
 
         mContext = context;
 
-        final TypedArray attributes = context.obtainStyledAttributes(attrs,R.styleable.PagerIndicator,0,0);
+        final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.PagerIndicator,0,0);
 
         int visibility = attributes.getInt(R.styleable.PagerIndicator_visibility,IndicatorVisibility.Visible.ordinal());
 

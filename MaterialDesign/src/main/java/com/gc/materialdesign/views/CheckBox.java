@@ -1,5 +1,6 @@
 package com.gc.materialdesign.views;
 
+
 import com.gc.materialdesign.R;
 import com.gc.materialdesign.utils.Utils;
 
@@ -21,6 +22,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.ColorRes;
+
+
 
 public class CheckBox extends CustomView {
 

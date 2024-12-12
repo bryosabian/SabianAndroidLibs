@@ -9,6 +9,8 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.TextView;
 
+
+
 public class FontAwesomeText extends TextView {
 
     public enum AnimationSpeed {

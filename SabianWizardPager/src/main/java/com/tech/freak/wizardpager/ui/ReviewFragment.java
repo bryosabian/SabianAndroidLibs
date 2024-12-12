@@ -31,11 +31,14 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import com.tech.freak.wizardpager.R;
 import com.tech.freak.wizardpager.model.AbstractWizardModel;
 import com.tech.freak.wizardpager.model.ModelCallbacks;
 import com.tech.freak.wizardpager.model.Page;
 import com.tech.freak.wizardpager.model.ReviewItem;
+
+
 
 public class ReviewFragment extends ListFragment implements ModelCallbacks {
     private Callbacks mCallbacks;

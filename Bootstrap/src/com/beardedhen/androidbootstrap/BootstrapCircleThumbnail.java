@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.beardedhen.androidbootstrap.utils.ImageUtils;
 
+
+
 public class BootstrapCircleThumbnail extends FrameLayout {
 
     private enum BootstrapCircleType {

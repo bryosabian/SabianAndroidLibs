@@ -13,8 +13,11 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import com.tech.freak.wizardpager.R;
 import com.tech.freak.wizardpager.model.Page;
+
+
 
 public class TextFragment extends Fragment {
 	protected static final String ARG_KEY = "key";

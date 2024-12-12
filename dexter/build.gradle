@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
+  namespace "com.karumi.dexter"
   compileSdkVersion 28
 
   defaultConfig {

@@ -29,9 +29,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import com.tech.freak.wizardpager.R;
 import com.tech.freak.wizardpager.model.Page;
 import com.tech.freak.wizardpager.model.SingleFixedChoicePage;
+
+
 
 public class SingleChoiceFragment extends ListFragment {
     private static final String ARG_KEY = "key";

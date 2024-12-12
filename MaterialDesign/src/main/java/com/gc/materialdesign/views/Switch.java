@@ -19,6 +19,8 @@ import com.gc.materialdesign.utils.Utils;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.nineoldandroids.view.ViewHelper;
 
+
+
 public class Switch extends CustomView {
 
     private int backgroundColor = Color.parseColor("#4CAF50");

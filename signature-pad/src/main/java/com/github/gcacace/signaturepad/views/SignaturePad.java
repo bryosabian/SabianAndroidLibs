@@ -29,6 +29,7 @@ import com.github.gcacace.signaturepad.view.ViewTreeObserverCompat;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class SignaturePad extends View {
     //View state
     private List<TimedPoint> mPoints;
@@ -109,7 +110,6 @@ public class SignaturePad extends View {
         clearView();
 
     }
-
 
 
     @Override

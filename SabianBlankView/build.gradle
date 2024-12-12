@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
+    namespace "tr.xip.errorview"
     compileSdkVersion 28
 
     defaultConfig {

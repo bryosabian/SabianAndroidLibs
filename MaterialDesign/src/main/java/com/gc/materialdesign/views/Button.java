@@ -16,6 +16,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
+
+
 public abstract class Button extends CustomView {
 
 	final static String ANDROIDXML = "http://schemas.android.com/apk/res/android";

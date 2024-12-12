@@ -13,6 +13,8 @@ import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+
+
 public class ButtonRectangle extends Button {
 	
 	TextView textButton;

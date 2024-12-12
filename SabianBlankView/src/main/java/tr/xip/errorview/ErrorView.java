@@ -32,12 +32,13 @@ import android.widget.TextView;
 
 import java.util.Map;
 
+
 /**
  * @author Ihsan Isik
- *         <p/>
- *         A custom view that displays an error image, a title, and a subtitle given an HTTP status
- *         code. It can be used for various other purposes like displaying other kinds of errors or
- *         just messages with images.
+ * <p/>
+ * A custom view that displays an error image, a title, and a subtitle given an HTTP status
+ * code. It can be used for various other purposes like displaying other kinds of errors or
+ * just messages with images.
  * @see #setError(int)
  * <p/>
  */

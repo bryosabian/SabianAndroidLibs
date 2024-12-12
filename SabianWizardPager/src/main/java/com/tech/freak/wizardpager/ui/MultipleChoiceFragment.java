@@ -32,9 +32,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import com.tech.freak.wizardpager.R;
 import com.tech.freak.wizardpager.model.MultipleFixedChoicePage;
 import com.tech.freak.wizardpager.model.Page;
+
+
 
 public class MultipleChoiceFragment extends ListFragment {
     private static final String ARG_KEY = "key";

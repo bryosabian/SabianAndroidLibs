@@ -31,21 +31,20 @@ dependencies {
 }
 
 android {
+    namespace "io.nlopez.smartlocation"
     compileSdkVersion 31
     buildToolsVersion '26.0.3'
 
-    buildTypes {
-        defaultConfig {
-            minSdkVersion 14
-            targetSdkVersion 31
-            versionCode 20006
-            versionName version
-        }
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 31
+        versionCode 20006
+        versionName version
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
-    }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_7
+//        targetCompatibility JavaVersion.VERSION_1_7
+//    }
 
 }

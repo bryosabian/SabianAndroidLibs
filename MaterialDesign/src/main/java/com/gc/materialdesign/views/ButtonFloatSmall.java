@@ -7,6 +7,8 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
+
+
 public class ButtonFloatSmall extends ButtonFloat {
 	
 	public ButtonFloatSmall(Context context, AttributeSet attrs) {

@@ -26,7 +26,9 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+
 import com.tech.freak.wizardpager.R;
+
 
 public class StepPagerStrip extends View {
     private static final int[] ATTRS = new int[]{

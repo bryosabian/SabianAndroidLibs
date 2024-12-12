@@ -15,6 +15,8 @@ import android.widget.TextView;
 import com.gc.materialdesign.R;
 import com.gc.materialdesign.views.ButtonFlat;
 
+
+
 public class Dialog extends AlertDialog{
 	
 	Context context;

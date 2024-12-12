@@ -6,7 +6,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.daimajia.slider.library.R;
+import com.daimajia.slider.R;
+
 
 /**
  * This is a slider with a description TextView.

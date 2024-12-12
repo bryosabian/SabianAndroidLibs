@@ -23,6 +23,8 @@ import com.gc.materialdesign.R;
 import com.gc.materialdesign.utils.Utils;
 import com.nineoldandroids.view.ViewHelper;
 
+
+
 public class Slider extends CustomView {
 
     private int backgroundColor = Color.parseColor("#4CAF50");
@@ -74,7 +76,7 @@ public class Slider extends CustomView {
     }
 
     public void setValue(final int value) {
-        if (placedBall == false)
+        if (!placedBall)
             post(new Runnable() {
 
                 @Override

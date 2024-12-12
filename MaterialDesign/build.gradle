@@ -5,6 +5,7 @@ apply plugin: 'kotlin-android'
 //apply plugin: 'com.jfrog.bintray'
 
 android {
+    namespace "com.gc.materialdesign"
     compileSdkVersion 28
 
     defaultConfig {

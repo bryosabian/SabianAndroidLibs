@@ -5,6 +5,8 @@ dependencies {
 }
 
 android {
+    namespace "com.beardedhen.androidbootstrap"
+
     compileSdkVersion 21
 
     defaultConfig {
@@ -13,6 +15,7 @@ android {
     }
 
     sourceSets {
+
         main {
             manifest.srcFile 'AndroidManifest.xml'
             java.srcDirs = ['src']

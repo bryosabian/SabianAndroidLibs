@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.animation.Interpolator;
 import android.widget.RelativeLayout;
 
+import com.daimajia.slider.R;
 import com.daimajia.slider.library.Animations.BaseAnimationInterface;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -39,6 +40,8 @@ import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import java.lang.reflect.Field;
 import java.util.Timer;
 import java.util.TimerTask;
+
+
 
 /**
  * SliderLayout is compound layout. This is combined with {@link com.daimajia.slider.library.Indicators.PagerIndicator}
@@ -163,7 +166,7 @@ public class SliderLayout extends RelativeLayout{
     }
 
     public SliderLayout(Context context, AttributeSet attrs) {
-        this(context,attrs,R.attr.SliderStyle);
+        this(context,attrs, R.attr.SliderStyle);
     }
 
     public SliderLayout(Context context, AttributeSet attrs, int defStyle) {

@@ -5,7 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.daimajia.slider.library.R;
+import com.daimajia.slider.R;
+
 
 /**
  * a simple slider view, which just show an image. If you want to make your own slider view,
